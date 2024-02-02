@@ -20,7 +20,9 @@ jobs:
       with:
         dev: no
         php_version: 8.1
-        command: composer install --no-dev && composer require roots/acorn
+
+    - name: Install Acorn
+      run: composer require roots/acorn
 
     - name: Setup node 16
       uses: actions/setup-node@v4
